@@ -1,4 +1,5 @@
-const gridContainer = document.querySelector('.gridContainer');
+//add 16 divs to the dom
+const gridContainer = document.querySelector('.container');
 
 for (let i = 0; i < 16; i++) {
 
@@ -8,3 +9,5 @@ for (let i = 0; i < 16; i++) {
 
 }
 
+//set up hover effect to make divs change color
+//use event listeners to track mouse
