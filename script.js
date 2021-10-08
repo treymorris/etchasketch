@@ -1,17 +1,38 @@
 //add 16 divs to the dom
-var container = document.querySelector('#container');
+const container = document.querySelector('#container');
 
-for (let i = 0; i < 256; i++) {
+function createContainer() {
+    for (let i = 0; i < 256; i++) {
+        const grids = document.createElement('div');
+        grids.classList.add('grids');
+        container.appendChild(grids);
+        grids.addEventListener('mouseover', runEvent); //set up hover effect to make divs change color
+        function runEvent(e) {
 
-    const grids = document.createElement('div');
-    grids.classList.add('grids');
-    grids.style.backgroundColor = 'white';
-    container.appendChild(grids);
-    grids.addEventListener('mouseover', runEvent); //set up hover effect to make divs change color
-    function runEvent(e) {
-
-    console.log(e.type);
+        console.log(e.type);
     
-    grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
+        grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
 }
 }
+};
+
+function updateContainer() {
+    container.innerHTML="";
+    container.style.setProperty("grid-template-columns", `repeat(${userInput.value}, 2fr)`);
+    container.style.setProperty("grid-template-rows", `repeat(${userInput.value}, 2fr)`);
+
+    for (let i = 0; i < userInput.value * userInput.value; i++) {
+        const grids = document.createElement('div');
+        grids.classList.add('grids');
+        container.appendChild(grids);
+        grids.addEventListener('mouseover', runEvent); //set up hover effect to make divs change color
+        function runEvent(e) {
+
+        console.log(e.type);
+    
+        grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
+}
+}
+};
+
+createContainer();
