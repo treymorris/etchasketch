@@ -1,5 +1,7 @@
 //add 16 divs to the dom
 const container = document.querySelector('#container');
+const userInput = document.getElementById("quantity");
+const clear = document.querySelector(".clear");
 
 function createContainer() {
     for (let i = 0; i < 256; i++) {
@@ -34,5 +36,15 @@ function updateContainer() {
 }
 }
 };
+
+userInput.addEventListener("change", updateContainer);
+
+clear.addEventListener("click", function() {
+    container.innerHTML = "";
+    userInput.innerHTML = "";
+    container.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
+    container.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
+    createContainer();
+});
 
 createContainer();

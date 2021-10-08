@@ -10,6 +10,8 @@ body {
     height: 100px;
     width: 775px;
     border-bottom: 10px solid red;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 #container {
@@ -21,6 +23,8 @@ body {
     border-left: 100px solid red;
     border-right: 100px solid red;
     border-bottom: 100px solid red;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .center {
@@ -30,5 +34,4 @@ body {
 
 .grids {
     background-color: white;
-    border: 1px solid black;
 }
