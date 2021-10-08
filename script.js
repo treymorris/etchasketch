@@ -1,13 +1,17 @@
 //add 16 divs to the dom
-const gridContainer = document.querySelector('.container');
+var container = document.querySelector('#container');
 
 for (let i = 0; i < 16; i++) {
 
-    const gridDiv = document.createElement('div');
-    gridDiv.classList.add('gridDiv');
-    gridContainer.appendChild(gridDiv);
+    const grids = document.createElement('div');
+    grids.classList.add('grids');
+    grids.style.backgroundColor = 'blue';
+    container.appendChild(grids);
+    grids.addEventListener('mouseover', runEvent); //set up hover effect to make divs change color
+    function runEvent(e) {
 
+    console.log(e.type);
+    
+    grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
 }
-
-//set up hover effect to make divs change color
-//use event listeners to track mouse
+}
