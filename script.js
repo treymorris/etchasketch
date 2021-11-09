@@ -9,11 +9,10 @@ function createContainer() {
         grids.classList.add('grids');
         container.appendChild(grids);
         grids.addEventListener('mouseover', runEvent); //set up hover effect to make divs change color
+        
         function runEvent(e) {
-
-        console.log(e.type);
-    
-        grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
+            console.log(e.type);
+            grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",240)";
 }
 }
 };
@@ -28,11 +27,10 @@ function updateContainer() {
         grids.classList.add('grids');
         container.appendChild(grids);
         grids.addEventListener('mouseover', runEvent); //set up hover effect to make divs change color
+        
         function runEvent(e) {
-
-        console.log(e.type);
-    
-        grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
+            console.log(e.type);
+            grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
 }
 }
 };
