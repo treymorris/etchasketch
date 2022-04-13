@@ -1,17 +1,26 @@
 body { 
     min-height: 100vh;
-    
+    background-image: url("https://images.freeimages.com/images/large-previews/31b/printed-circuit-board-1143238.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .header {
     text-align: center;
     background-color: red;
     color: white;
-    height: 100px;
-    width: 775px;
+    height: 15vh;
+    width: 750px;
     border-bottom: 10px solid red;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    margin-top: 3em;
+}
+
+.main-container {
+    max-width: 60vw;
+    margin: auto;
 }
 
 #container {
@@ -19,7 +28,7 @@ body {
     grid-template-columns: repeat(16, 2fr);
     grid-template-rows: repeat(16, 2fr);
     height: 575px;
-    width: 575px;
+    width: 550px;
     border-left: 100px solid red;
     border-right: 100px solid red;
     border-bottom: 100px solid red;

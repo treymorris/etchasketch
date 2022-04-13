@@ -1,4 +1,3 @@
-//add 16 divs to the dom
 const container = document.querySelector('#container');
 const userInput = document.getElementById("quantity");
 const clear = document.querySelector(".clear");
@@ -11,10 +10,11 @@ function createContainer() {
         grids.addEventListener('mouseover', runEvent); //set up hover effect to make divs change color
         
         function runEvent(e) {
-            console.log(e.type);
-            grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",240)";
-}
-}
+            r = e.offsetX + 50;
+            g = e.offsetY + 100;
+            grids.style.backgroundColor = `rgb(${r},${g},40)`;
+        }
+    }
 };
 
 function updateContainer() {
@@ -30,9 +30,9 @@ function updateContainer() {
         
         function runEvent(e) {
             console.log(e.type);
-            grids.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)";
-}
-}
+            grids.style.backgroundColor = `rgb(${r},${g},40)`;
+        }
+    }
 };
 
 userInput.addEventListener("change", updateContainer);
